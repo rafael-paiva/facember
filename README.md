@@ -1,7 +1,8 @@
 # Facember
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+Facember is a social network project used as reference for an Ember.js course.
 
 ## Prerequisites
 
