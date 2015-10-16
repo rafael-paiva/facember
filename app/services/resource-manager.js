@@ -17,6 +17,10 @@ var ResourceManager = Ember.Service.extend({
   getCurrentUser: function () {
     console.log('to aqui no getCurrentuser');
     return this.apiManager.getCurrentUser();
+  },
+
+  getCurrentUserFriends: function () {
+    return this.apiManager.getCurrentUserFriends();
   }
 });
 
