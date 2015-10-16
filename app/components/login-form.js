@@ -6,11 +6,20 @@ export default Ember.Component.extend({
 
   actions: {
     login: function () {
-      console.log('to aqui logando - username: ', this.get('username'), ' - password: ', this.get('password'));
+      let cmpnt = this;
+      let username = cmpnt.get('username');
+      let password = cmpnt.get('password');
 
-      return this.resourceManager.login(this.get('username'), this.get('password'));
-
-      // this.sendAction('login', this.get('username'), this.get('password'));
+      return cmpnt.resourceManager
+        .login(username, password)
+        .then(function (response) {
+          console.log('Logged in. Token: ', response.token);
+          cmpnt.set('session.isAuthenticated', true);
+        })
+        .catch(function (response) {
+          console.log('Log in failed. Reason: ', response.errorThrown);
+          cmpnt.set('session.isAuthenticated', false);
+        });
     }
   }
 });

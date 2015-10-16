@@ -6,8 +6,12 @@ import Ember from 'ember';
  */
 var ResourceManager = Ember.Service.extend({
   login: function (username, password) {
-    console.log('to aqui no login do ResourceManager');
-    return this.apiManager.login(username, password);
+    let data = {
+      username: username,
+      password: password
+    };
+
+    return this.apiManager.login(data);
   },
 });
 

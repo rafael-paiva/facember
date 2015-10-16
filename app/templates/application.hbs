@@ -2,6 +2,10 @@
   <h2 id="title">Facember</h2>
 </div>
 
-{{login-form}}
+{{#if session.isAuthenticated}}
+  User is logged in.
+{{else}}
+  {{login-form}}
+{{/if}}
 
 {{outlet}}
