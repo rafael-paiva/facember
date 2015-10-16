@@ -2,10 +2,6 @@
   <h2 id="title">Facember</h2>
 </div>
 
-{{#if session.isAuthenticated}}
-  User is logged in.
-{{else}}
-  {{login-form}}
-{{/if}}
-
 {{outlet}}
+
+{{my-profile profile=model}}

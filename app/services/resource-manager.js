@@ -13,6 +13,11 @@ var ResourceManager = Ember.Service.extend({
 
     return this.apiManager.login(data);
   },
+
+  getCurrentUser: function () {
+    console.log('to aqui no getCurrentuser');
+    return this.apiManager.getCurrentUser();
+  }
 });
 
 export default ResourceManager;
