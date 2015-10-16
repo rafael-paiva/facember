@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'facember',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/facember',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -16,7 +16,13 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    // jscs:disable validateQuoteMarks
+    contentSecurityPolicy: {
+      'connect-src': "'self' http://localhost:3000"
     }
+    // jscs:enable
   };
 
   if (environment === 'development') {
