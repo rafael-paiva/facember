@@ -21,6 +21,14 @@ var ResourceManager = Ember.Service.extend({
 
   getCurrentUserFriends: function () {
     return this.apiManager.getCurrentUserFriends();
+  },
+
+  getFriendsRequest: function () {
+    return this.apiManager.getFriendsRequest();
+  },
+
+  acceptFriendRequest: function (requesterId) {
+    return this.apiManager.acceptFriendRequest(requesterId);
   }
 });
 

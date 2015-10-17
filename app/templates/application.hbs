@@ -4,6 +4,12 @@
 
 {{outlet}}
 
-{{my-profile profile=model.me}}
+{{#if model}}
+  <div class="container-fluid">
+    {{my-profile profile=model.me class="col-sm-12"}}
 
-{{my-friends friends=model.friends}}
+    {{my-friends friends=model.friends class="col-sm-6"}}
+
+    {{my-friends-request requests=model.friendsRequest class="col-sm-6"}}
+  </div>
+{{/if}}

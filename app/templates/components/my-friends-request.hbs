@@ -1,0 +1,16 @@
+<h4>Friends Request:</h4>
+{{#if requests}}
+  {{#each requests as |request|}}
+    <div class="row">
+      <div class="requester-name col-xs-7">
+        <p>{{request.userRequester.name}}</p>
+      </div>
+      <div class="request-actions col-xs-5">
+        <button class="btn btn-primary btn-xs" {{action "acceptFriendRequest" request.userRequester._id}}>Accept</button>
+        <button class="btn btn-primary btn-xs">Reject</button>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <h5>You have no pending requests :)</h5>
+{{/if}}

@@ -1,11 +1,8 @@
-<div class="container-fluid">
-  {{!-- <button class="btn btn-default" {{action "getMyFriends"}}>Show my friends</button> --}}
-  <h4>My Friends:</h4>
-  {{#if friends}}
-    {{#each friends as |friend|}}
-      <p>{{friend.user.name}}</p>
-    {{/each}}
-  {{else}}
-    <h5>You don't have any friends yet :(</h5>
-  {{/if}}
-</div>
+<h4>My Friends:</h4>
+{{#if friends}}
+  {{#each friends as |friend|}}
+    <p>{{friend.user.name}}</p>
+  {{/each}}
+{{else}}
+  <h5>You have no friends yet :(</h5>
+{{/if}}
