@@ -6,7 +6,7 @@
         <p>{{request.userRequester.name}}</p>
       </div>
       <div class="request-actions col-xs-5">
-        <button class="btn btn-primary btn-xs" {{action "acceptFriendRequest" request.userRequester._id}}>Accept</button>
+        <button class="btn btn-primary btn-xs" {{action "acceptFriendRequest" request.userRequester.id}}>Accept</button>
         <button class="btn btn-primary btn-xs">Reject</button>
       </div>
     </div>

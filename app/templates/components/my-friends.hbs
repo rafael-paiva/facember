@@ -1,7 +1,7 @@
 <h4>My Friends:</h4>
-{{#if friends}}
-  {{#each friends as |friend|}}
-    <p>{{friend.user.name}}</p>
+{{#if friendships}}
+  {{#each friendships}}
+    <p>{{user.name}}</p>
   {{/each}}
 {{else}}
   <h5>You have no friends yet :(</h5>
