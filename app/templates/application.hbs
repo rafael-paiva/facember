@@ -2,14 +2,6 @@
   <h2 id="title">Facember</h2>
 </div>
 
-{{outlet}}
-
-{{#if model}}
-  <div class="container-fluid">
-    {{my-profile profile=model.me class="col-sm-12"}}
-
-    {{my-friends friendships=model.friends class="col-sm-6"}}
-
-    {{my-friends-request requests=model.friendsRequest class="col-sm-6"}}
-  </div>
-{{/if}}
+<div class="container-fluid">
+  {{outlet}}
+</div>

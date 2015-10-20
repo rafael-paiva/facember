@@ -1,0 +1,11 @@
+{{#if model}}
+  {{my-profile profile=model.me class="col-sm-12"}}
+
+  <div class="col-sm-6">
+    {{#link-to "friends" class="btn btn-primary"}}
+      See my friends
+    {{/link-to}}
+  </div>
+
+  {{my-friends-request requests=model.friendsRequest class="col-sm-6"}}
+{{/if}}

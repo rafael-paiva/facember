@@ -1,0 +1,12 @@
+<div class="container">
+  <h4>My Friends:</h4>
+  {{#if model}}
+    {{#each model as |friend|}}
+      <p>{{#link-to "friends.friend" friend.user.id}}{{friend.user.name}}{{/link-to}}</p>
+    {{/each}}
+  {{else}}
+    <h5>You have no friends yet :(</h5>
+  {{/if}}
+
+  {{outlet}}
+</div>
